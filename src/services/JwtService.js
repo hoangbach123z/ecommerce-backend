@@ -16,6 +16,7 @@ const genneralRefreshToken = async (payload) => {
     },process.env.REFRESH_TOKEN,{expiresIn: '365d'})
     return access_token
 }
+
  
 module.exports = {
     genneralAccessToken,
