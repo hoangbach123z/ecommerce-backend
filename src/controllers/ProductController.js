@@ -91,10 +91,9 @@ const deleteMany = async (req, res) => {
     }
 }
 
-const getAllProduct = async (req, res) => {
+const getAllType = async (req, res) => {
     try {
-        const { limit, page} = req.query
-        const response = await ProductService.getAllProduct(Number(limit) || null, Number(page))
+        const response = await ProductService.getAllType()
         return res.status(200).json(response)
     } catch (e) {
         return res.status(404).json({
@@ -103,9 +102,9 @@ const getAllProduct = async (req, res) => {
     }
 }
 
-const getAllType = async (req, res) => {
+const getAllProduct = async (req, res) => {
     try {
-        const response = await ProductService.getAllType()
+        const response = await ProductService.getAllProduct()
         return res.status(200).json(response)
     } catch (e) {
         return res.status(404).json({
